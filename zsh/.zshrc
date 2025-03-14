@@ -51,9 +51,13 @@ zinit load agkozak/zsh-z
 #Plugin - OMZ
 zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
+zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 #Plugin - replace GNU/ls with eza-community/eza
 zinit light z-shell/zsh-eza
+
+#Plugin -  enhances the terminal environment with 256 color
+zinit light chrissicool/zsh-256color
 
 # alias
 alias .='source'
