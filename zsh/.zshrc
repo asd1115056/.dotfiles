@@ -32,3 +32,28 @@ zinit ice depth"1"; zinit light romkatv/powerlevel10k
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# #Plugin - zsh-autocomplete, fast-syntax-highlighting
+zinit wait lucid for \
+ atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+    zdharma-continuum/fast-syntax-highlighting \
+ blockf \
+    marlonrichert/zsh-autocomplete \
+ atload"!_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions
+
+#Plugin - MichaelAquilina/zsh-you-should-use
+zinit light MichaelAquilina/zsh-you-should-use
+
+#Plugin - zsh-z
+zinit load agkozak/zsh-z
+
+#Plugin - OMZ
+zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
+zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
+
+#Plugin - replace GNU/ls with eza-community/eza
+zinit light z-shell/zsh-eza
+
+# alias
+alias .='source'
