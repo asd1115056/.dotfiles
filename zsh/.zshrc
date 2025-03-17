@@ -102,3 +102,31 @@ zinit light chrissicool/zsh-256color
 #######################################################
 
 alias .='source'
+alias c='clear'
+alias ..='cd ..'
+alias mkdir='mkdir -pv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias rmdir='rmdir -v'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Alias for neovim
+if [[ -x "$(command -v nvim)" ]]; then
+	alias vi='nvim'
+	alias vim='nvim'
+	alias svi='sudo nvim'
+	alias vis='nvim "+set si"'
+elif [[ -x "$(command -v vim)" ]]; then
+	alias vi='vim'
+	alias svi='sudo vim'
+	alias vis='vim "+set si"'
+fi
+
+# Alias for lazygit
+# Link: https://github.com/jesseduffield/lazygit
+if [[ -x "$(command -v lazygit)" ]]; then
+    alias lg='lazygit'
+fi
