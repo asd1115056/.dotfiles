@@ -72,7 +72,7 @@ setopt hist_find_no_dups
 #######################################################
 
 #Plugin - zsh-autocomplete, fast-syntax-highlighting
-zinit wait lucid for \
+zinit lucid for \
  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
     zdharma-continuum/fast-syntax-highlighting \
  blockf \
