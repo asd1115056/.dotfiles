@@ -33,7 +33,45 @@ zinit ice depth"1"; zinit light romkatv/powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# #Plugin - zsh-autocomplete, fast-syntax-highlighting
+#######################################################
+# ZSH Basic Options
+#######################################################
+
+setopt autocd              # change directory just by typing its name
+setopt correct             # auto correct mistakes
+setopt interactivecomments # allow comments in interactive mode
+setopt magicequalsubst     # enable filename expansion for arguments of the form ‘anything=expression’
+setopt nonomatch           # hide error message if there is no match for the pattern
+setopt notify              # report the status of background jobs immediately
+setopt numericglobsort     # sort filenames numerically when it makes sense
+setopt promptsubst         # enable command substitution in prompt
+
+#######################################################
+# Environment Variables
+#######################################################
+
+
+#######################################################
+# History Configuration
+#######################################################
+
+HISTSIZE=2000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+#######################################################
+# Plugin Configuration
+#######################################################
+
+#Plugin - zsh-autocomplete, fast-syntax-highlighting
 zinit wait lucid for \
  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
     zdharma-continuum/fast-syntax-highlighting \
@@ -59,5 +97,8 @@ zinit light z-shell/zsh-eza
 #Plugin -  enhances the terminal environment with 256 color
 zinit light chrissicool/zsh-256color
 
-# alias
+#######################################################
+# Aliases
+#######################################################
+
 alias .='source'
